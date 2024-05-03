@@ -57,3 +57,16 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+var swiper = new Swiper('.swiper-container', {
+    loop: true, // Enables continuous swiping
+    spaceBetween: 10, // Space between slides
+    pagination: {
+        el: '.swiper-pagination', // Enables pagination dots
+        clickable: true, // Allows users to click the dots
+    },
+    navigation: {
+        nextEl: '.swiper-button-next', // Specifies next button
+        prevEl: '.swiper-button-prev', // Specifies previous button
+    },
+});
