@@ -70,3 +70,43 @@ var swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev', // Specifies previous button
     },
 });
+function filterPets(type) {
+    var pets = document.getElementsByClassName('pet');
+    for (var i = 0; i < pets.length; i++) {
+        var pet = pets[i];
+        if (type === 'diff') {
+            if (pet.classList.contains('dogs') || pet.classList.contains('cats')) {
+                pet.style.display = 'none';
+            } else {
+                pet.style.display = 'block';
+            }
+        } else if (pet.classList.contains(type)) {
+            pet.style.display = 'block';
+        } else {
+            pet.style.display = 'none';
+        }
+    }
+}
+document.querySelector('[data-toggle="dropdown"]').addEventListener('click', function (event) {
+    const type = event.target.getAttribute('data-type'); 
+    filterPets(type); 
+  });
+  
+const userName = localStorage.getItem('loggedInUser');
+
+if (userName) {
+    // If a user is logged in, hide the Login button and display the user's name
+    document.getElementById('loginNavItem').style.display = 'none';
+    document.getElementById('userNavItem').style.display = 'block';
+    document.getElementById('userName').textContent = userName;
+}
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+
+    // Save the username in local storage (for this example)
+    localStorage.setItem('loggedInUser', username);
+
+    // Redirect to the main page
+    window.location.href = 'index.html';
+});

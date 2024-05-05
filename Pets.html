@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pets for Adoption - The Starry Station</title>
+    <link rel="shortcut icon" type="x-icon" href="https://cdn-icons-png.flaticon.com/256/5267/5267241.png">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <main>
+        <!-- Flex container for aligning button and title in the same row -->
+        <div class="d-flex align-items-center justify-content-center mb-3"> <!-- Flex container to center elements -->
+            <button onclick="window.location.href='index.html'" class="nav-link-rounded"> <!-- Styled back button -->
+                &larr; Back
+            </button>
+            <h1 class="mx-auto" style="font-size: 2.5em;">Pets for Adoption</h1> <!-- Increase font size and center -->
+        </div>
+        <hr class="divider mx-auto" style="width: 100%;" /> <!-- Centered divider with adjusted width -->
+
+
+        <div class="d-flex justify-content-center mb-3"> <!-- Flexbox layout to center the dropdown -->
+            <div class="dropdown"> <!-- Dropdown button -->
+                <button
+                    class="btn btn-primary dropdown-toggle"
+                    type="button"
+                    id="animalTypeDropdown"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                >
+                    Select Animal Type
+                </button>
+                <div class="dropdown-menu" aria-labelledby="animalTypeDropdown"> <!-- The dropdown menu -->
+                    <a class="dropdown-item" href="#" onclick="filterPets('dogs')">Dogs</a>
+                    <a class="dropdown-item" href="#" onclick="filterPets('cats')">Cats</a>
+                    <a class="dropdown-item" href="#" onclick="filterPets('diff')">Others</a>
+                </div>
+            </div>
+        </div>
+                <!-- Create a second row for the next set of pets -->
+                <div class="row">
+                    <!-- Pet 4 -->
+                    <div class="col-md-4">
+                        <div class="pet cats">
+                            <img src="https://i.pinimg.com/736x/0d/88/c6/0d88c617ac8262a35a0f56c6933e66d1.jpg" alt="Cat" class="img-fluid">
+                            <div class="pet-description">
+                                <h2>Meshmesh</h2>
+                                <p>Fuzzy and fluffy male cat.</p>
+                            </div>
+                            <button class="adopt-button">Adopt Now!</button>
+                        </div>
+                    </div>
+            
+                    <!-- Pet 5 -->
+                    <div class="col-md-4">
+                        <div class="pet cats">
+                            <img src="https://i.pinimg.com/736x/5f/ce/03/5fce0329d93ad5d2b41bd29537ba4f0b.jpg" alt="Cat" class="img-fluid">
+                            <div class="pet-description">
+                                <h2>Felxy</h2>
+                                <p>Fluffy, energetic male cat.</p>
+                            </div>
+                            <button class="adopt-button">Adopt Now!</button>
+                        </div>
+                    </div>
+            
+                    <!-- Pet 6 -->
+                    <div class="col-md-4">
+                        <div class="pet cats">
+                            <img src="https://i.pinimg.com/736x/51/35/02/51350291ba2a26865c971ae80ea8cc7b.jpg" alt="Cat" class="img-fluid">
+                            <div class="pet-description">
+                                <h2>Tamatem</h2>
+                                <p>Ginger, crazy, and fluffy female cat.</p>
+                            </div>
+                            <button class="adopt-button">Adopt Now!</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Add more rows for the remaining pets -->
+                <div class="row">
+                    <!-- Pet 7 -->
+                    <div class="col-md-4">
+                        <div class="pet cats">
+                            <img src="https://i.pinimg.com/736x/81/61/02/816102ee5c5927aa81a91f6acfa88cdb.jpg" alt="Cat" class="img-fluid">
+                            <div class="pet-description">
+                                <h2>Grey</h2>
+                                <p>Calm and playful male cat.</p>
+                            </div>
+                            <button class="adopt-button">Adopt Now!</button>
+                        </div>
+                    </div>
+            
+                    <!-- Pet 8 -->
+                    <div class="col-md-4">
+                        <div class="pet cats">
+                            <img src="https://i.pinimg.com/736x/71/cb/63/71cb6385005ee2896b8ae286644776c3.jpg" alt="Cat" class="img-fluid">
+                            <div class="pet-description">
+                                <h2>Simba</h2>
+                                <p>4-month-old Sherazi cat, very cuddly.</p>
+                            </div>
+                            <button class="adopt-button">Adopt Now!</button>
+                        </div>
+                    </div>
+            
+                    <!-- Pet 9 -->
+                    <div class="col-md-4">
+                        <div class="pet cats">
+                            <img src="https://i.pinimg.com/474x/08/c8/cd/08c8cdcb24406c50b06d6115ced5ab11.jpg" alt="cat" class="img-fluid">
+                            <div class="pet-description">
+                                <h2>Snow</h2>
+                                <p>The real snow-white cat, very spoiled in a good way.</p>
+                            </div>
+                            <button class="adopt-button">Adopt Now!</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <!-- Pet 10 -->
+                    <div class="col-md-4">
+                        <div class="pet cats">
+                            <img src="https://i.pinimg.com/736x/dc/68/ca/dc68cae949b86290f4ffd407a67ac682.jpg" alt="Cat" class="img-fluid">
+                            <div class="pet-description">
+                                <h2>3asal</h2>
+                                <p>Rescued from Siwa, very clingy and cuddly.</p>
+                            </div>
+                            <button class="adopt-button">Adopt Now!</button>
+                        </div>
+                    </div>
+            
+                    <!-- Pet 11 -->
+                    <div class="col-md-4">
+                        <div class="pet diff">
+                            <img src="https://i.pinimg.com/736x/ed/e0/b6/ede0b66dd85ae0fd802f77d56459aa27.jpg" alt="Hamster" class="img-fluid">
+                            <div class="pet-description">
+                                <h2>Zatoona</h2>
+                                <p>Loves running on her wheel and is very cuddly and curious.</p>
+                            </div>
+                            <button class="adopt-button">Adopt Now!</button>
+                        </div>
+                    </div>
+            
+                    <!-- Pet 12 -->
+                    <div class="col-md-4">
+                        <div class="pet diff">
+                            <img src="https://i.pinimg.com/474x/42/66/9e/42669ec9fb564a0fabd4acea193e4e6c.jpg" alt="eagle" class="img-fluid">
+                            <div class="pet-description">
+                                <h2>Mezoun</h2>
+                                <p>Very playful eagle that will make you take the spotlight.</p>
+                            </div>
+                            <button class="adopt-button">Adopt Now!</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <!-- Pet 13 -->
+                    <div class="col-md-4">
+                        <div class="pet diff">
+                            <img src="https://i.pinimg.com/736x/3b/8c/73/3b8c73d21db5b7d2b371af8fbf97af34.jpg" alt="parrot" class="img-fluid">
+                            <div class="pet-description">
+                                <h2>Ba8ba8</h2>
+                                <p>Smart and fun energetic parrot that will become a mini you.</p>
+                            </div>
+                            <button class="adopt-button">Adopt Now!</button>
+                        </div>
+                    </div>
+            
+                    <!-- Pet 14 -->
+                    <div class="col-md-4">
+                        <div class="pet diff">
+                            <img src="https://i.pinimg.com/474x/b1/25/04/b1250413e74eee9fcc864ccda999a893.jpg" alt="bird" class="img-fluid">
+                            <div class="pet-description">
+                                <h2>Tutu</h2>
+                                <p>She loves being near you and giving kisses; don't be shocked when she randomly lands on your head.</p>
+                            </div>
+                            <button class="adopt-button">Adopt Now!</button>
+                        </div>
+                    </div>
+            
+                    <!-- Pet 15 -->
+                    <div class="col-md-4">
+                        <div class="pet dogs">
+                            <img src="https://i.pinimg.com/474x/5c/a1/ba/5ca1ba5c8904a08d3895f20ad87072b6.jpg" alt="Dog" class="img-fluid">
+                            <div class="pet-description">
+                                <h2>Max</h2>
+                                <p>1-year-old male, rescue obedient and well-behaved guard dog rescued from an abusive owner.</p>
+                            </div>
+                            <button class="adopt-button">Adopt Now!</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <!-- Pet 16 -->
+                    <div class="col-md-4">
+                        <div class="pet dogs">
+                            <img src="https://i.pinimg.com/736x/58/c7/7a/58c77a08cdb2d316dc89e56661733968.jpg" alt="Dog" class="img-fluid">
+                            <div class="pet-description">
+                                <h2>Semsem</h2>
+                                <p>5-year-old female, very cuddly at-home dog.</p>
+                            </div>
+                            <button class="adopt-button">Adopt Now!</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Load More Button at the bottom to reload the page -->
+                <div class="text-center mt-4"> <!-- Center the button with some margin at the top -->
+                    <button onclick="location.reload()" class="btn btn-primary">Load More Pets</button>
+                </div>
+            </div>
+            
+
+        </div>
+                
+    </main>
+
+    <footer class="bg-light py-5">
+        <div class="container px-4 px-lg-5">
+            <div class="small text-center text-muted">&copy; 2024 The Starry Station. All rights reserved.</div>
+        </div>
+    </footer>
+   <!-- Include jQuery and Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

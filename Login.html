@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - The Starry Station</title>
+    <link rel="shortcut icon" type="x-icon" href="https://i.pinimg.com/236x/ee/49/31/ee4931b9a37062c18ba22dd71f684cb9.jpg">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <section class="page-section bg-primary text-dark" id="login">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6 text-center">
+                    <!-- Rounded Back Button to return to the main page -->
+                    <div class="text-start mb-3"> <!-- Aligns the button to the left -->
+                        <button onclick="window.location.href='index.html'" class="nav-link-rounded"> <!-- Apply the nav-link-rounded class -->
+                            &larr; Back
+                        </button>
+                    </div>
+
+                    <h2 class="mt-0" style="font-size: 2.5em;">Login to Your Account</h2>
+                    <hr class="divider" style="background-color: white;" />
+                    <p>Enter your username and password to access your account.</p>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                <div class="col-lg-6">
+                    <form id="loginForm">
+                        <!-- Username input -->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="username" type="text" placeholder="Enter your username" required>
+                            <label for="username">Username</label>
+                        </div>
+                        <!-- Password input -->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="password" type="password" placeholder="Enter your password" required>
+                            <label for="password">Password</label>
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="d-grid">
+                            <button class="nav-link-rounded" type="submit">Login</button> <!-- Use the same class for consistency -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5">
+                <div class="small text-center text-muted">&copy; 2024 The Starry Station. All rights reserved.</div>
+            </div>
+        </footer>
+        <script src="scripts.js"></script>
+</body>
+</html>

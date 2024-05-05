@@ -26,43 +26,37 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container px-4 px-lg-5">
           <a class="navbar-brand" href="#page-top">Your trusted source for pet adoption.</a>
-          <button
-            class="navbar-toggler navbar-toggler-right"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto my-2 my-lg-0">
-              <!-- Other nav items -->
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#reasons">Reasons</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#adoption-signup">Get Started with Adoption</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#success-stories">Success Stories</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link-rounded" href="/login">Login</a> <!-- Use the rounded class for the button -->
+              <!-- Navigation items -->
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#reasons">Reasons</a></li>
+              <li class="nav-item"><a class="nav-link" href="#adoption-signup">Get Started with Adoption</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+
+              <!-- Login or User info, depending on login status -->
+              <li class="nav-item" id="loginNavItem">
+                <a class="nav-link-rounded" href="Login.html">
+                    <img src="https://i.pinimg.com/236x/10/85/c3/1085c34ee06422164514edf31711900e.jpg" alt="Profile Icon" style="width: 20px; height: 20px; border-radius: 50%;">
+                    Login
+                </a>
+            </li>
+              <li class="nav-item" id="userNavItem" style="display: none;">
+                <a class="nav-link-rounded">
+                  <img src="https://i.pinimg.com/236x/10/85/c3/1085c34ee06422164514edf31711900e.jpg" alt="Profile" style="width: 20px; height: 20px; border-radius: 50%;">
+                  <span id="userName"></span>
+                </a>
               </li>
             </ul>
           </div>
         </div>
-      </nav>
-    
+    </nav>
+      
     <!-- Masthead-->
     
     <header class="masthead">
@@ -76,7 +70,7 @@
 
                 <div class="col-lg-8 align-self-baseline">
                     <p class="text-white-75 mb-5">“Everybody should have a shelter dog. It’s good for the soul.” - Paul Shaffer</p>
-                    <a class="btn btn-primary btn-xl" href="#adoption-signup">Adopt now</a>
+                    <a class="btn btn-primary btn-xl" href="Pets.html">Adopt now</a>
                 </div>
             </div>
         </div>
@@ -213,10 +207,10 @@
 </section>
 
 <!-- Success Stories with Swiper -->
-<section id="success-stories" class="page-section bg-light text-dark" style="padding-top: 50px; padding-bottom: 0;"> <!-- Reduced padding -->
+<section id="Successful-Adoptions" class="page-section bg-light text-dark" style="padding-top: 50px; padding-bottom: 0;"> <!-- Reduced padding -->
     <div class="container">
         <div class="text-center">
-            <h2>Success Stories</h2>
+            <h2>Successful Adoptions</h2>
             <p>Read about the pets that have found their forever homes through our platform!</p>
         </div>
         
@@ -253,7 +247,7 @@
                 <div class="swiper-slide" style="display: flex; justify-content: center;">
                     <article class="col-lg-5 card border-0 bg-primary" style="margin: 0 5px;">
                         <img class="card-img-top" style="height: 520px;"
-                        src="https://livingworldgreen.com/wp-content/uploads/2023/08/Untitled-design-3.png" 
+                             src="https://livingworldgreen.com/wp-content/uploads/2023/08/Untitled-design-3.png" 
                              alt="Joyful adopted rabbit">
                         <div class="card-body">
                             <h4 class="card-title text-center">Hopper's Leap to Love</h4>
@@ -266,7 +260,7 @@
                 <div class="swiper-slide" style="display: flex; justify-content: center;">
                     <article class="col-lg-5 card border-0 bg-primary" style="margin: 0 5px;">
                         <img class="card-img-top" style="height: 520px;"
-                        src="https://lafeber.com/pet-birds/wp-content/uploads/2022/01/jon-leclainche-yVewvpyfV_o-unsplash-225x300.jpg" 
+                             src="https://lafeber.com/pet-birds/wp-content/uploads/2022/01/jon-leclainche-yVewvpyfV_o-unsplash-225x300.jpg" 
                              alt="Delighted adopted parrot">
                         <div class="card-body">
                             <h4 class="card-title text-center">Polly's New Perch</h4>
@@ -279,7 +273,7 @@
                 <div class="swiper-slide" style="display: flex; justify-content: center;">
                     <article class="col-lg-5 card border-0 bg-primary" style="margin: 0 5px;">
                         <img class="card-img-top" 
-                        src="https://www.marylandzoo.org/wp-content/uploads/2017/10/box_turtle_web.jpg" 
+                             src="https://www.marylandzoo.org/wp-content/uploads/2017/10/box_turtle_web.jpg" 
                              alt="Content adopted turtle">
                         <div class="card-body">
                             <h4 class="card-title text-center">Shelby's Safe Harbor</h4>
