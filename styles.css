@@ -4522,6 +4522,7 @@ textarea.form-control-lg {
 .navbar-dark .navbar-text a:focus {
   color: #fff;
 }
+
 .nav-link-rounded {
   padding: 0.375rem 0.75rem;  /* Consistent padding */
   border-radius: 25px;        /* Rounded corners */
@@ -4536,7 +4537,6 @@ textarea.form-control-lg {
   background-color: #044855;  /* Hover effect */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Hover shadow */
 }
-
 
 .card {
   position: relative;
@@ -11449,8 +11449,46 @@ header.masthead h1, header.masthead .h1 {
     font-size: 3.5rem;
   }
 }
+.row.justify-content-center .col-lg-8.col-xl-6.text-center h2,
+.row.justify-content-center .col-lg-8.col-xl-6.text-center p {
+    color: white; /* Set text color to white */
+}
+
+
+.swiper-container .swiper-slide article.card {
+  width: auto; /* Allow articles to adjust width based on content */
+  display: flex; /* Set display to flex */
+  justify-content: center; /* Center the content horizontally */
+  margin: 0 5px; /* Apply margin as needed */
+
+  /* Styles of col-lg-5 card border-0 bg-primary */
+  width: 100%; /* Adjust the width as needed */
+  max-width: 540px; /* Adjust the max-width as needed */
+  padding: 15px; /* Add padding as needed */
+  margin-right: auto; /* Align to the right */
+  margin-left: auto; /* Align to the left */
+  border: 0; /* Remove border */
+  background-color: #C0424E; /* Set background color */
+  color: #fff; /* Set text color */
+
+}
+
+.card-img-top {
+  height: 520px; /* Set the desired height */
+  
+}
+.swiper-container .swiper-slide  {
+  display: flex; /* Set display to flex */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  width: auto; /* Allow slides to adjust width based on content */
+
+}
 .swiper-container {
   position: relative; /* Ensures navigation buttons are positioned correctly */
+  display: flex; /* Set the container as a flex container */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
   overflow: hidden; /* Prevents unwanted overflow */
   padding-bottom: 20px; /* Adjust as needed for additional space */
 }
@@ -11461,6 +11499,7 @@ header.masthead h1, header.masthead .h1 {
 
 .swiper-button-next,
 .swiper-button-prev {
+  bottom: 10px;
   position: absolute; /* Keeps buttons positioned within the container */
   top: 50%; /* Centers the buttons vertically */
   transform: translateY(-50%); /* Centers vertically */
@@ -11481,7 +11520,7 @@ header.masthead h1, header.masthead .h1 {
 .swiper-button-prev {
   left: 10px; /* Aligns prev button to the left */
 }
-
+/* Define a consistent height for each row to maintain uniformity */
 .row {
   display: flex; /* Use flexbox for layout */
   flex-wrap: wrap; /* Allow items to wrap to next line */
@@ -11508,14 +11547,18 @@ header.masthead h1, header.masthead .h1 {
   display: flex;
   justify-content: center; /* Center the image horizontally */
   align-items: center; /* Center the image vertically */
-  height: 150px; /* Set consistent height for the image container */
+  height: 200px; /* Set consistent height for the image container */
+  margin-bottom: 10px; /* Space between image container and description */
 }
 
 .pet .image-container img {
-  width: auto; /* Allow image width to adjust */
-  height: auto; /* Allow image height to adjust */
-  max-width: 100%; /* Ensure the image fits within the container */
-  max-height: 100%; /* Ensure the image fits within the container */
+  width: 100%; /* Set width for all images to fill their containers */
+  height: 100%; /* Set height for all images to fill their containers */
+  object-fit: cover; /* Ensure images maintain aspect ratio and cover entire container */
+}
+.pet img {
+  width: 600px; /* Set a fixed width */
+  height: 400px; /* Set a fixed height */
 }
 
 .pet-description {
@@ -11537,4 +11580,9 @@ header.masthead h1, header.masthead .h1 {
 
 .adopt-button:hover {
   background-color: #a6373b; /* Darker red on hover */
+}
+
+.custom-margin-bottom {
+  margin-bottom: 100px; /* Custom margin bottom */
+  margin-top: 10px;
 }
