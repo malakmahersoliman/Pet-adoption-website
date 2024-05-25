@@ -37,21 +37,15 @@
               <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
               <li class="nav-item"><a class="nav-link" href="#reasons">Reasons</a></li>
               <li class="nav-item"><a class="nav-link" href="#adoption-signup">Get Started with Adoption</a></li>
+              <li class="nav-item"><a class="nav-link" href="#Successful-Adoptions">Successful Adoptions</a></li>
               <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
 
-              <!-- Login or User info, depending on login status -->
               <li class="nav-item" id="loginNavItem">
                 <a class="nav-link-rounded" href="Login.html">
                     <img src="https://i.pinimg.com/236x/10/85/c3/1085c34ee06422164514edf31711900e.jpg" alt="Profile Icon" style="width: 20px; height: 20px; border-radius: 50%;">
                     Login
                 </a>
             </li>
-              <li class="nav-item" id="userNavItem" style="display: none;">
-                <a class="nav-link-rounded">
-                  <img src="https://i.pinimg.com/236x/10/85/c3/1085c34ee06422164514edf31711900e.jpg" alt="Profile" style="width: 20px; height: 20px; border-radius: 50%;">
-                  <span id="userName"></span>
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -157,55 +151,52 @@
         </div>
 
 <!-- Pet Adoption Signup Form -->
-<section id="adoption-signup" class="page-section bg-primary text-dark "  >
+<section id="adoption-signup" class="page-section bg-primary text-dark">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-lg-8 col-xl-6 text-center">
                 <h2 class="mt-0">Now is the Time to Adopt!</h2>
                 <hr class="divider" style="background-color: white;" />
-                <p>Interested in adopting a pet? Fill out the form below to receive more information about pet adoption and available pets in your area.</p>
+                <p>Interested in adopting a pet? Fill out the form below to take the first step in adoption and receive more information about available pets in your area.</p>
             </div>
         </div>
         <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
             <div class="col-lg-6">
-                <form id="adoptionForm">
+                <form id="adoptionForm" action="signup.php" method="post">
                     <!-- Name input -->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="name" type="text" placeholder="Enter your name..."
-                            required />
+                        <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required />
                         <label for="name">Full Name</label>
                         <div class="invalid-feedback">A name is required.</div>
                     </div>
                     <!-- Email input -->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="email" type="email" placeholder="name@example.com"
-                            required />
+                        <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" required />
                         <label for="email">Email Address</label>
                         <div class="invalid-feedback">An email is required.</div>
                     </div>
                     <!-- Phone input -->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"
-                            required />
+                        <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" required />
                         <label for="phone">Phone Number</label>
                         <div class="invalid-feedback">A phone number is required.</div>
                     </div>
-                    <!-- Message/Adoption Interest -->
+                    <!-- Password input -->
                     <div class="form-floating mb-3">
-                        <textarea class="form-control" id="adoption-interest" placeholder="Why are you interested in adopting a pet?"
-                            required style="height: 10rem;"></textarea>
-                        <label for="adoption-interest">Why do you want to adopt a pet?</label>
-                        <div class="invalid-feedback">Please explain why you're interested in adopting.</div>
+                        <input class="form-control" id="password" name="password" type="password" placeholder="Enter your password" required />
+                        <label for="password">Password</label>
+                        <div class="invalid-feedback">A password is required.</div>
                     </div>
                     <!-- Submit Button -->
                     <div class="d-grid">
-                        <button class="btn btn-light btn-xl" type="submit">Sign Up for Adoption</button> <!-- Light-colored button -->
+                        <button class="btn btn-light btn-xl" type="submit">Sign Up for Adoption</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </section>
+
 
 <!-- Success Stories with Swiper -->
 <section id="Successful-Adoptions" class="page-section bg-light text-dark" style="padding-top: 50px; padding-bottom: 0;"> <!-- Reduced padding -->
