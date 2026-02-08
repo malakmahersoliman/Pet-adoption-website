@@ -1,67 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Adoption Form - The Stray Station</title>
-    <link rel="shortcut icon" type="x-icon" href="https://i.pinimg.com/564x/90/65/d6/9065d6c29c5c289ded18bdd779262b9b.jpg">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <link
+      rel="shortcut icon"
+      type="x-icon"
+      href="https://i.pinimg.com/564x/90/65/d6/9065d6c29c5c289ded18bdd779262b9b.jpg"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <section id="adoption-signup" class="page-section bg-primary text-dark">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-lg-8 col-xl-6 text-center">
-                    <h2 class="mt-0">Now is the Time to Adopt!</h2>
-                    <hr class="divider" style="background-color: white;" />
-                    <p>Are you ready to bring home a furry friend? Fill out the form below to learn more about pet adoption and find your perfect match.</p>
-                </div>
-            </div>
-            <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                <div class="col-lg-6">
-                    <form id="adoptionForm" action="php/submit_form.php" method="POST">
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required />
-                            <label for="name">Full Name</label>
-                            <div class="invalid-feedback">A name is required.</div>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" required />
-                            <label for="email">Email Address</label>
-                            <div class="invalid-feedback">An email is required.</div>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" required />
-                            <label for="phone">Phone Number</label>
-                            <div class="invalid-feedback">A phone number is required.</div>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="address" name="address" type="text" placeholder="Enter your address..." required />
-                            <label for="address">Address</label>
-                            <div class="invalid-feedback">An address is required.</div>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="age" name="age" type="number" placeholder="Enter your age..." required />
-                            <label for="age">Age</label>
-                            <div class="invalid-feedback">An age is required.</div>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="adoption-interest" name="adoption_interest" placeholder="Why are you interested in adopting a pet?" required style="height: 10rem;"></textarea>
-                            <label for="adoption-interest">Why do you want to adopt a pet?</label>
-                            <div class="invalid-feedback">Please explain why you're interested in adopting.</div>
-                        </div>
-                        <div class="d-grid">
-                            <button class="btn btn-light btn-xl" type="submit">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-lg-8 col-xl-6 text-center">
+            <h2 class="mt-0">Now is the Time to Adopt!</h2>
+            <hr class="divider" style="background-color: white" />
+            <p>
+              Are you ready to bring home a furry friend? Fill out the form
+              below to learn more about pet adoption and find your perfect
+              match.
+            </p>
+          </div>
         </div>
+        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+          <div class="col-lg-6">
+            <form id="adoptionForm" action="php/submit_form.php" method="POST">
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Enter your name..."
+                  required
+                />
+                <label for="name">Full Name</label>
+                <div class="invalid-feedback">A name is required.</div>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="name@example.com"
+                  required
+                />
+                <label for="email">Email Address</label>
+                <div class="invalid-feedback">An email is required.</div>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="(123) 456-7890"
+                  required
+                />
+                <label for="phone">Phone Number</label>
+                <div class="invalid-feedback">A phone number is required.</div>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="address"
+                  name="address"
+                  type="text"
+                  placeholder="Enter your address..."
+                  required
+                />
+                <label for="address">Address</label>
+                <div class="invalid-feedback">An address is required.</div>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="age"
+                  name="age"
+                  type="number"
+                  placeholder="Enter your age..."
+                  required
+                />
+                <label for="age">Age</label>
+                <div class="invalid-feedback">An age is required.</div>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea
+                  class="form-control"
+                  id="adoption-interest"
+                  name="adoption_interest"
+                  placeholder="Why are you interested in adopting a pet?"
+                  required
+                  style="height: 10rem"
+                ></textarea>
+                <label for="adoption-interest"
+                  >Why do you want to adopt a pet?</label
+                >
+                <div class="invalid-feedback">
+                  Please explain why you're interested in adopting.
+                </div>
+              </div>
+              <div class="d-grid">
+                <button class="btn btn-light btn-xl" type="submit">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
     <footer class="bg-light py-5">
-        <div class="container px-4 px-lg-5">
-            <div class="small text-center text-muted">&copy; 2024 The Starry Station. All rights reserved.</div>
+      <div class="container px-4 px-lg-5">
+        <div class="small text-center text-muted">
+          &copy; 2024 The stray Station. All rights reserved.
         </div>
+      </div>
     </footer>
     <script src="js/scripts.js"></script>
-</body>
+  </body>
 </html>
