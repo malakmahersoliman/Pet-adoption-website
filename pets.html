@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pets for Adoption - The stray Station</title>
+    <link
+      rel="shortcut icon"
+      type="x-icon"
+      href="https://cdn-icons-png.flaticon.com/256/5267/5267241.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body class="site-sticky-footer bg-white">
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top shadow-sm"
+      id="mainNav"
+    >
+      <div class="container px-3 px-lg-4">
+        <a class="navbar-brand fw-semibold text-truncate me-2" href="index.html" style="max-width: 70vw"
+          >The stray Station</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarPets"
+          aria-controls="navbarPets"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarPets">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="pets.html">Browse pets</a>
+            </li>
+            <li class="nav-item" id="navWhenGuest">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item" id="navWhenAuthed" style="display: none">
+              <span class="nav-link small text-muted py-lg-2"><span id="navUserName"></span></span>
+            </li>
+            <li class="nav-item" id="navDashboard" style="display: none">
+              <a class="nav-link" href="dashboard.html">Manage pets</a>
+            </li>
+            <li class="nav-item" id="navLogoutWrap" style="display: none">
+              <a class="nav-link" href="#" id="navLogoutBtn">Log out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container site-main-spacer pb-5 flex-grow-1">
+      <header class="text-center mb-4 px-1">
+        <h1 class="h2 mb-2">Pets for adoption</h1>
+        <p class="text-muted mb-3 mb-md-4 small">
+          Filter by type, then open an adoption request for the pet you love.
+        </p>
+        <hr class="divider mx-auto mb-0" style="max-width: 12rem" />
+      </header>
+
+      <div
+        class="btn-group flex-wrap justify-content-center mb-4 d-flex shadow-sm rounded-pill p-1 bg-light"
+        role="group"
+        aria-label="Filter by animal type"
+      >
+        <button type="button" class="btn btn-sm btn-primary rounded-pill px-3" data-pet-filter="all">
+          All
+        </button>
+        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3" data-pet-filter="dogs">
+          Dogs
+        </button>
+        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3" data-pet-filter="cats">
+          Cats
+        </button>
+        <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3" data-pet-filter="diff">
+          Other
+        </button>
+      </div>
+
+      <div id="petGrid" class="row g-4"></div>
+    </main>
+
+    <footer class="bg-light py-4 mt-auto border-top">
+      <div class="container px-4 px-lg-5">
+        <div class="small text-center text-muted">&copy; 2026 The stray Station. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/auth-ui.js"></script>
+    <script src="js/pets-page.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

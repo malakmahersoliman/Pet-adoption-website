@@ -11520,69 +11520,82 @@ header.masthead h1, header.masthead .h1 {
 .swiper-button-prev {
   left: 10px; /* Aligns prev button to the left */
 }
-/* Define a consistent height for each row to maintain uniformity */
-.row {
-  display: flex; /* Use flexbox for layout */
-  flex-wrap: wrap; /* Allow items to wrap to next line */
-  border: 1px solid transparent; /* Color for row border */
-  margin-bottom: 20px; /* Space between rows */
-}
-
-.pet {
-  flex: 1 1 calc(33.333% - 20px); /* Each pet takes up one-third of the row with margin */
-  margin: 10px; /* Space between pets */
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Arrange items vertically */
-  border: 1px solid #C0424E; /* Border around each pet block */
-  padding: 10px; /* Add padding for breathing space */
-  background-color: white; /* Background color for visibility */
-  transition: all 0.3s; /* Smooth transition for hover effects */
-}
-
-.pet:hover {
-  background-color: #f5f5f5; /* Light gray on hover for visual feedback */
-}
-
-.pet .image-container {
-  display: flex;
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
-  height: 200px; /* Set consistent height for the image container */
-  margin-bottom: 10px; /* Space between image container and description */
-}
-
-.pet .image-container img {
-  width: 100%; /* Set width for all images to fill their containers */
-  height: 100%; /* Set height for all images to fill their containers */
-  object-fit: cover; /* Ensure images maintain aspect ratio and cover entire container */
-}
-.pet img {
-  width: 600px; /* Set a fixed width */
-  height: 400px; /* Set a fixed height */
-}
-
-.pet-description {
-  text-align: center; /* Center text */
-  padding: 10px; /* Padding around the description */
-  flex: 1; /* Allow description to take up remaining space */
-}
-
-.adopt-button {
-  background-color: #C0424E; /* Red background */
-  border: none; /* No border on button */
-  color: white; /* White text */
-  padding: 10px 20px; /* Padding for button */
-  border-radius: 8px; /* Rounded corners */
-  text-align: center; /* Center button text */
-  margin-top: 10px; /* Space above button */
-  transition: background-color 0.3s; /* Smooth hover transition */
-}
-
-.adopt-button:hover {
-  background-color: #a6373b; /* Darker red on hover */
-}
-
 .custom-margin-bottom {
   margin-bottom: 100px; /* Custom margin bottom */
   margin-top: 10px;
+}
+
+/* App overrides: responsive pet cards & dashboard */
+.pet-card-dynamic .card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
+.site-main-spacer {
+  padding-top: 5.5rem;
+}
+
+@media (max-width: 767.98px) {
+  .site-main-spacer {
+    padding-top: 4.75rem;
+  }
+}
+
+/* Layout fixes: do not override Bootstrap .row globally (breaks grid). */
+.site-sticky-footer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-sticky-footer main {
+  flex: 1 0 auto;
+}
+
+.adopt-layout .adopt-intro {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.adopt-layout .adopt-intro h2,
+.adopt-layout .adopt-intro p {
+  color: inherit;
+}
+
+.adopt-layout .adopt-form-panel {
+  background: #fff;
+  color: #212529;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.12);
+}
+
+.navbar .nav-auth-cluster .nav-link {
+  padding: 0.5rem 0.75rem;
+}
+
+.table-dashboard-photo {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+}
+
+.section-reasons-pad {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 992px) {
+  .section-reasons-pad {
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .btn-dash-add {
+    width: 100%;
+  }
+}
+
+#contact.section-contact-top {
+  border-top: 4px solid #d94b58;
 }

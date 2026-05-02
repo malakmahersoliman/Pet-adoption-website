@@ -1,15 +1,10 @@
 <?php
-// Database configuration
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "adoption_form";
+/**
+ * Legacy include expected by older scripts: mysqli $conn to application database.
+ */
+require_once __DIR__ . '/config.php';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+$conn = stray_db_connect();
+if (!$conn) {
+    die('Connection failed: could not connect to database. Import sql/stray_station.sql.');
 }
-?>

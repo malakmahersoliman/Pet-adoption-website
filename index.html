@@ -35,17 +35,24 @@
             <ul class="navbar-nav ms-auto my-2 my-lg-0">
               <!-- Navigation items -->
               <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="pets.html">Browse pets</a></li>
               <li class="nav-item"><a class="nav-link" href="#reasons">Reasons</a></li>
               <li class="nav-item"><a class="nav-link" href="#adoption-signup">Get Started with Adoption</a></li>
               <li class="nav-item"><a class="nav-link" href="#Successful-Adoptions">Successful Adoptions</a></li>
               <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
 
-              <li class="nav-item" id="loginNavItem">
-                <a class="nav-link-rounded" href="Login.html">
-                    <img src="https://i.pinimg.com/236x/10/85/c3/1085c34ee06422164514edf31711900e.jpg" alt="Profile Icon" style="width: 20px; height: 20px; border-radius: 50%;">
-                    Login
-                </a>
-            </li>
+              <li class="nav-item" id="navWhenGuest">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>
+              <li class="nav-item" id="navWhenAuthed" style="display:none">
+                <span class="nav-link"><span id="navUserName"></span></span>
+              </li>
+              <li class="nav-item" id="navDashboard" style="display:none">
+                <a class="nav-link" href="dashboard.html">Manage pets</a>
+              </li>
+              <li class="nav-item" id="navLogoutWrap" style="display:none">
+                <a class="nav-link" href="#" id="navLogoutBtn">Log out</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -56,7 +63,7 @@
     <header class="masthead">
         <div class="container px-4 px-lg-5 h-100">
             <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                <div class="col-lg-20 align-self-end">
+                <div class="col-12 col-lg-10 col-xl-8 align-self-end mx-auto">
                     <h1 class="text-white font-weight-bold">Welcome to The stray Station!</h1>
                     <hr class="divider" />
                 </div>
@@ -64,7 +71,7 @@
 
                 <div class="col-lg-8 align-self-baseline">
                     <p class="text-white-75 mb-5">“Everybody should have a shelter dog. It’s good for the soul.” - Paul Shaffer</p>
-                    <a class="btn btn-primary btn-xl" href="Pets.html">Adopt now</a>
+                    <a class="btn btn-primary btn-xl" href="pets.html">Adopt now</a>
                 </div>
             </div>
         </div>
@@ -113,7 +120,7 @@
         </div>
     </section>
     <!-- Services-->
-    <section class="page-section" id="reasons" style="padding-top: 150px; padding-bottom: 150px;">
+    <section class="page-section section-reasons-pad" id="reasons">
         <div class="container px-4 px-lg-5 custom-margin-bottom">
             <h2 class="text-center mt-0" >Top Reasons To Adopt A Pet!</h2>
             <hr class="divider" />
@@ -162,34 +169,30 @@
         </div>
         <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
             <div class="col-lg-6">
-                <form id="adoptionForm" action="php/signup.php" method="post">
-                    <!-- Name input -->
+                <form id="homeSignupForm" action="php/signup.php" method="post" novalidate>
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required />
-                        <label for="name">Full Name</label>
+                        <input class="form-control" id="homeName" name="name" type="text" placeholder="Enter your name..." required autocomplete="name" />
+                        <label for="homeName">Full Name</label>
                         <div class="invalid-feedback">A name is required.</div>
                     </div>
-                    <!-- Email input -->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" required />
-                        <label for="email">Email Address</label>
+                        <input class="form-control" id="homeEmail" name="email" type="email" placeholder="name@example.com" required autocomplete="email" />
+                        <label for="homeEmail">Email Address</label>
                         <div class="invalid-feedback">An email is required.</div>
                     </div>
-                    <!-- Phone input -->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" required />
-                        <label for="phone">Phone Number</label>
+                        <input class="form-control" id="homePhone" name="phone" type="tel" placeholder="(123) 456-7890" required autocomplete="tel" />
+                        <label for="homePhone">Phone Number</label>
                         <div class="invalid-feedback">A phone number is required.</div>
                     </div>
-                    <!-- Password input -->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="password" name="password" type="password" placeholder="Enter your password" required />
-                        <label for="password">Password</label>
-                        <div class="invalid-feedback">A password is required.</div>
+                        <input class="form-control" id="homePassword" name="password" type="password" placeholder="Enter your password" required minlength="6" autocomplete="new-password" />
+                        <label for="homePassword">Password</label>
+                        <div class="invalid-feedback">A password of at least 6 characters is required.</div>
                     </div>
-                    <!-- Submit Button -->
+                    <p class="small text-white-75 mb-3">Already registered? <a class="text-white fw-bold" href="login.html">Sign in</a>. Prefer the full form? <a class="text-white fw-bold" href="register.html">Register here</a>.</p>
                     <div class="d-grid">
-                        <button class="btn btn-light btn-xl" type="submit">Sign Up for Adoption</button>
+                        <button class="btn btn-light btn-xl" type="submit">Create account &amp; continue</button>
                     </div>
                 </form>
             </div>
@@ -286,7 +289,7 @@
 
 
 
-<section class="page-section bg-light" id="contact" style="padding-top: 1; border: 5px solid #D94B58;"> <!-- Remove extra padding -->
+<section class="page-section bg-light section-contact-top pt-5" id="contact">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center text-center">
             <div class="col-lg-8 col-xl-6">
@@ -313,7 +316,7 @@
     <!-- Footer-->
     <footer class="bg-light py-5">
         <div class="container px-4 px-lg-5">
-            <div class="small text-center text-muted">&copy; 2024 The stray Station. All rights reserved.</div>
+            <div class="small text-center text-muted">&copy; 2026 The stray Station. All rights reserved.</div>
         </div>
     </footer>
     <!-- Bootstrap core JS-->
@@ -323,6 +326,7 @@
     <!-- Include Swiper.js and its CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/auth-ui.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->

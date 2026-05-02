@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adoption Form - The Stray Station</title>
+    <link
+      rel="shortcut icon"
+      type="x-icon"
+      href="https://i.pinimg.com/564x/90/65/d6/9065d6c29c5c289ded18bdd779262b9b.jpg"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body class="site-sticky-footer bg-light adopt-layout">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm fixed-top">
+      <div class="container px-3 px-lg-4">
+        <a class="navbar-brand fw-semibold" href="index.html">The stray Station</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarAdopt"
+          aria-controls="navbarAdopt"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarAdopt">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link" href="pets.html">Browse pets</a>
+            </li>
+            <li class="nav-item" id="navWhenGuest">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item" id="navWhenAuthed" style="display: none">
+              <span class="nav-link small text-muted py-lg-2"><span id="navUserName"></span></span>
+            </li>
+            <li class="nav-item" id="navDashboard" style="display: none">
+              <a class="nav-link" href="dashboard.html">Manage pets</a>
+            </li>
+            <li class="nav-item" id="navLogoutWrap" style="display: none">
+              <a class="nav-link" href="#" id="navLogoutBtn">Log out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex-grow-1 bg-primary">
+      <div class="container px-3 px-lg-5 py-4 site-main-spacer">
+        <div class="alert alert-light border-0 shadow-sm d-none mb-4" id="adoptSuccess" role="status"></div>
+
+        <div class="row justify-content-center adopt-intro text-center mb-4">
+          <div class="col-lg-8 col-xl-7">
+            <p class="small fw-semibold text-uppercase mb-2 opacity-75">Adoption request</p>
+            <h2 class="h3 mb-3">Tell us about your home</h2>
+            <p class="mb-2 small d-none px-md-2" id="adoptPetHint" role="status"></p>
+            <p class="mb-0 small opacity-90 px-md-2">
+              Share why you want to adopt so we can match the right companion to your lifestyle.
+            </p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center pb-5">
+          <div class="col-lg-8 col-xl-6">
+            <div class="adopt-form-panel p-4 p-md-5">
+              <form id="adoptionForm" action="php/submit_form.php" method="POST" novalidate>
+                <input type="hidden" name="pet_id" id="adoptPetId" value="" />
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Enter your name..."
+                    required
+                    autocomplete="name"
+                  />
+                  <label for="name">Full Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="name@example.com"
+                    required
+                    autocomplete="email"
+                  />
+                  <label for="email">Email Address</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="(123) 456-7890"
+                    required
+                    autocomplete="tel"
+                  />
+                  <label for="phone">Phone Number</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="address"
+                    name="address"
+                    type="text"
+                    placeholder="Enter your address..."
+                    required
+                    autocomplete="street-address"
+                  />
+                  <label for="address">Address</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="age"
+                    name="age"
+                    type="number"
+                    min="1"
+                    max="120"
+                    placeholder="Age"
+                    required
+                  />
+                  <label for="age">Age</label>
+                </div>
+                <div class="form-floating mb-4">
+                  <textarea
+                    class="form-control"
+                    id="adoption-interest"
+                    name="adoption_interest"
+                    placeholder="Why are you interested in adopting a pet?"
+                    required
+                    style="height: 10rem"
+                  ></textarea>
+                  <label for="adoption-interest">Why do you want to adopt a pet?</label>
+                </div>
+                <div class="d-grid">
+                  <button class="btn btn-primary btn-lg" type="submit">Submit request</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-white py-4 border-top mt-auto">
+      <div class="container px-4 px-lg-5 text-center small text-muted">
+        &copy; 2026 The stray Station. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/auth-ui.js"></script>
+    <script src="js/adopt-page.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
