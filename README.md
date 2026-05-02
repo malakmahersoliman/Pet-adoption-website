@@ -253,13 +253,3 @@ Traditional form POST endpoints:
 
 ---
 
-## Credits
-
-- **The Stray Station** — university / portfolio project demonstrating relational database design, server-side validation, authentication, and CRUD operations.
-- UI builds on a **Start Bootstrap–style** theme (`css/styles.css`).
-
----
-
-## License
-
-If no license file is present in the repository, default copyright applies. Add a `LICENSE` file (e.g. MIT) when you are ready to publish under explicit terms.
